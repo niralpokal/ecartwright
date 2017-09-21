@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
     template: `
     <div class="parallex container overlay">
         <div class="center pre-white">
-            <span class="padding"><img src="../../assets/logo.png"></span>
+            <span class="padding"><img class="logo" src="../../assets/logo.png"></span>
         </div>
     </div>
+    <about-me></about-me>
     `
 })
 
