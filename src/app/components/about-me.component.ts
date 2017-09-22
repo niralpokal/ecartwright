@@ -4,11 +4,16 @@ import { Component } from '@angular/core';
     selector: 'about-me',
     styleUrls: ['about-me.component.scss'],
     template: `
-    <div class="container margin content">
+    <div class="container margin content ">
         <h3 class="center font">About Me</h3>
         <p style="white-space:pre-line">
             {{intro}}
         <p>
+        <div class="img-container">
+            <div class="img-center">
+                <img class="img"src="../../assets/profile.jpg">
+            </div>
+        </div>
     </div>
     `  
 })
