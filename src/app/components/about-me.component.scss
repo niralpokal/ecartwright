@@ -1,9 +1,7 @@
 .container {
     padding: 64px 16px;
 }
-.img-container {
-    position: relative;
-}
+
 .content {
     max-width: 980px;
     margin: auto;
@@ -16,12 +14,12 @@
 }
 
 .img {
-    width: 100%;
+    max-width: 100%;
+    height:auto;
 }
 .img-center{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    display: block;
+    margin: 0 auto;
 }
 h3 {
     font-size: 2rem;

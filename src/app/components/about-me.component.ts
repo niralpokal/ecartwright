@@ -9,11 +9,7 @@ import { Component } from '@angular/core';
         <p style="white-space:pre-line">
             {{intro}}
         <p>
-        <div class="img-container">
-            <div class="img-center">
-                <img class="img"src="../../assets/profile.jpg">
-            </div>
-        </div>
+        <img class="img img-center" src="../../assets/profile.jpg" height="400" >
     </div>
     `  
 })
