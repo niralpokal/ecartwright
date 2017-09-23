@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
     </div>
     <about-me></about-me>
     <home-portfolio></home-portfolio>
+    <home-contact></home-contact>
     `
 })
 
