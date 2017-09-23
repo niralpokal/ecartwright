@@ -1,3 +1,37 @@
 .container {
-    
+    position: relative;
+}
+
+.overlay {
+    opacity: .8;
+}
+
+.parallex {
+    background-image: url("../../assets/background2.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.white-space {
+    white-space: nowrap;
+}
+
+.black {
+    color: white;
+    text-align: center;
+}
+.padding {
+    padding: 12px 24px;
+}
+.large-center-text {
+    font-size: 42px;
+    letter-spacing: 10px;
 }

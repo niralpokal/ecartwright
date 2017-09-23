@@ -4,7 +4,14 @@ import { Component } from '@angular/core';
     selector:'home-portfolio',
     styleUrls: ['home-portfolio.component.scss'],
     template: `
-    <div class="container"></div>
+    <div class="parallex container overlay">
+       <div class="center white-space">     
+            <span class="black padding large-center-text">Portfolio</span>
+        </div>
+    </div>
+    <div>
+        
+    </div>
     `
 })
 export class HomePortfolioComponent {
