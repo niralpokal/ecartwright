@@ -22,6 +22,17 @@ import { Component } from '@angular/core';
         <div class="flex-item">
             <img class="img" src="../../assets/profile.jpg">
         </div>
+        </div>
+        <div class="flex-container">
+        <div class="flex-item">
+            <img class="img" src="../../assets/profile.jpg">
+        </div>
+        <div class="flex-item">
+            <img class="img" src="../../assets/profile.jpg">
+        </div>
+        <div class="flex-item">
+            <img class="img" src="../../assets/profile.jpg">
+        </div>
         <div class="flex-item">
             <img class="img" src="../../assets/profile.jpg">
         </div>
