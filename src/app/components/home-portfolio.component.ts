@@ -9,8 +9,22 @@ import { Component } from '@angular/core';
             <span class="black padding large-center-text">Portfolio</span>
         </div>
     </div>
-    <div>
-        
+    <div class="flex-container">
+        <div class="flex-item">
+            <img class="img" src="../../assets/profile.jpg">
+        </div>
+        <div class="flex-item">
+            <img class="img" src="../../assets/profile.jpg">
+        </div>
+        <div class="flex-item">
+            <img class="img" src="../../assets/profile.jpg">
+        </div>
+        <div class="flex-item">
+            <img class="img" src="../../assets/profile.jpg">
+        </div>
+        <div class="flex-item">
+            <img class="img" src="../../assets/profile.jpg">
+        </div>
     </div>
     `
 })

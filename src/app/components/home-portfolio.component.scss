@@ -35,3 +35,20 @@
     font-size: 42px;
     letter-spacing: 10px;
 }
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+.flex-item {
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
