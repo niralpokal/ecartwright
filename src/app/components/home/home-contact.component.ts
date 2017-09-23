@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
     <div class="flex-container">
         <div class="flex-item">
             <p>Location:</p>
-            <img src="../../assets/profile.jpg" >
+            <img src="../../../assets/profile.jpg" >
         </div>
         <div class="flex-item">
             <p> Drop a dime here</p>

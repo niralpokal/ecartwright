@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'about-me',
-    styleUrls: ['about-me.component.scss'],
+    selector: 'home-about-me',
+    styleUrls: ['home-about-me.component.scss'],
     template: `
     <div class="container margin content ">
         <h3 class="center font">About Me</h3>
         <p style="white-space:pre-line">
             {{intro}}
         <p>
-        <img class="img img-center" src="../../assets/profile.jpg" height="400" >
+        <img class="img img-center" src="../../../assets/profile.jpg" height="400" >
     </div>
     `  
 })
 
-export class AboutMeComponent{
+export class HomeAboutMeComponent{
     intro:string = 
     `Thanks for stopping by! I am a young account professional working and living my dream in Los Angeles, California. Born in Stoke-on-Trent, England, I came to America at 2 years old and therefore lack the neat accent. I was raised outside of Philadelphia, Pennsylvania next door to the mushroom farming capital of the world. I attended Penn State, double majoring in Advertising and Integrated Art with a focus on Design and Photography. I graduated in 2014 and made the cross country trek to LA in August of that year. 
     

@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
             <span class="padding"><img class="logo" src="../../assets/logo.png"></span>
         </div>
     </div>
-    <about-me></about-me>
+    <home-about-me></home-about-me>
     <home-portfolio></home-portfolio>
     <home-contact></home-contact>
     `
