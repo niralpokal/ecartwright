@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
             <span class="black padding large-center-text">Portfolio</span>
         </div>
     </div>
-    <div class="flex-container">
+    <div class="flex-container margin-top">
         <div class="flex-item">
             <img class="img" src="../../../assets/profile.jpg">
         </div>
