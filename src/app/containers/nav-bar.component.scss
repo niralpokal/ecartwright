@@ -22,7 +22,7 @@ a {
     position: relative;
     animation: animatetop .4s
 }
-.nav-item{
+.nav-item {
     float: left;
     width: auto;
     padding: 8px 16px;
@@ -37,6 +37,25 @@ a {
     vertical-align: middle;
     overflow: hidden;
 }
+.nav-item-block {
+    @extend .nav-item;
+    float: none;
+    width: 100%;
+    text-align: left;
+    white-space: normal;
+}
+
+@media (min-width: 601px){
+    .hide-med-up {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .hide-small-down {
+        display: none;
+    }
+}
+
 
 @keyframes animatetop {
     0%{
