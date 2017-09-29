@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+const topNavBarClass: string = 'nav-bar-class';
+const scrollNavBarClass: string = `${topNavBarClass} white-back nav-trans`;
 
 @Component({
     selector: 'nav-bar',
@@ -6,21 +8,16 @@ import { Component, OnInit } from '@angular/core';
     template: `
     <div class="top">
         <div [className]="navBarClass">
-            <a class="nav-item nav-button hide-small-down">Home</a>
-            <a class="nav-item nav-button hide-small-down">Portfolio</a>
-            <a class="nav-item nav-button hide-small-down">Instagram</a>
-            <a class="nav-item nav-button hide-small-down">Other</a>
-            <a class="nav-item-block nav-button hide-med-up">Home</a>
-            <a class="nav-item-block nav-button hide-med-up">Portfolio</a>
-            <a class="nav-item-block nav-button hide-med-up">Instagram</a>
-            <a class="nav-item-block nav-button hide-med-up">Other</a>
+            <a class="nav-item-class" *ngFor="let item of navBarItems">{{item}}</a>
+            <a class="small-nav-item-class" *ngFor="let item of navBarItems">{{item}}</a>
         </div>
     </div>
     `
-})
+}) 
 
 export class NavBarComponent implements OnInit {
-    navBarClass:string = 'bar';
+    navBarClass:string = topNavBarClass;
+    navBarItems:[string] = ['Home', 'Portfolio', 'Instagram', 'Other'];
 
     ngOnInit() {
         document.addEventListener('scroll', this.scroll, true); 
@@ -31,8 +28,9 @@ export class NavBarComponent implements OnInit {
     }
 
     scroll = (e):void => { 
-       let top = document.documentElement.scrollTop || document.body.scrollTop;
-       if (top > 200) this.navBarClass = 'white-back nav-trans bar';
-       else this.navBarClass = 'bar'; 
+       let top: number = document.documentElement.scrollTop || document.body.scrollTop;
+       debugger;
+       if (top > 200) this.navBarClass = scrollNavBarClass;
+       else this.navBarClass = topNavBarClass; 
     }
 }

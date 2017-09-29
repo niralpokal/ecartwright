@@ -1,12 +1,17 @@
+@mixin white-back() {
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+}
+a {
+    line-height: 1.8;
+    font-size: 1.5em;
+}
 .top {
     position: fixed;;
     top: 0px;
     width: 100%;
     z-index: 1;
-}
-a {
-    line-height: 1.8;
-    font-size: 1.5em;
 }
 .bar {
     width: 100%;
@@ -14,9 +19,7 @@ a {
     color:#777;
 }
 .white-back {
-    background-color: #fff;
-    color: black;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+    @include white-back();
 }
 .nav-trans {
     position: relative;
@@ -44,7 +47,19 @@ a {
     text-align: left;
     white-space: normal;
 }
-
+.small-nav-item-class {
+    @extend .nav-item-block;
+    @extend .nav-button; 
+    @extend .hide-med-up;
+}
+.nav-item-class {
+    @extend .nav-item;
+    @extend .nav-button;
+    @extend .hide-small-down;
+}
+.nav-bar-class {
+    @extend .bar;
+}
 @media (min-width: 601px){
     .hide-med-up {
         display: none;
@@ -54,9 +69,10 @@ a {
     .hide-small-down {
         display: none;
     }
+    .nav-bar-class {
+        @include white-back();
+    }
 }
-
-
 @keyframes animatetop {
     0%{
         top: -300px;
