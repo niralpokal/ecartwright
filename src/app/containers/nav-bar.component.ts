@@ -9,7 +9,11 @@ const scrollNavBarClass: string = `${topNavBarClass} white-back nav-trans`;
     <div class="top">
         <div [className]="navBarClass">
             <a class="nav-item-class" *ngFor="let item of navBarItems">{{item}}</a>
-            <a class="small-nav-item-class" *ngFor="let item of navBarItems">{{item}}</a>
+            <ng-template ngFor let-item let-i="index" let-f="first" [ngForOf]="navBarItems">
+                <a [ngClass]="{ 'small-nav-item-class': true, 'hidden':!f }">
+                   {{item}}
+                </a>
+            </ng-template>
         </div>
     </div>
     `

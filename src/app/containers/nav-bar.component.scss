@@ -18,6 +18,9 @@ a {
     overflow: hidden;
     color:#777;
 }
+.hidden {
+    display: none;
+}
 .white-back {
     @include white-back();
 }
