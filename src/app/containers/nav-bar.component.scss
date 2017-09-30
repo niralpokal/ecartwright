@@ -3,6 +3,10 @@
     color: black;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
 }
+@mixin black-back() {
+    background-color: black;
+    color: white;
+}
 a {
     line-height: 1.8;
     font-size: 1.5em;
@@ -17,9 +21,6 @@ a {
     width: 100%;
     overflow: hidden;
     color:#777;
-}
-.hidden {
-    display: none;
 }
 .white-back {
     @include white-back();
@@ -50,7 +51,7 @@ a {
     text-align: left;
     white-space: normal;
 }
-.small-nav-item-class {
+.small-nav-item-block-class {
     @extend .nav-item-block;
     @extend .nav-button; 
     @extend .hide-med-up;
@@ -59,6 +60,20 @@ a {
     @extend .nav-item;
     @extend .nav-button;
     @extend .hide-small-down;
+}
+.small-nav-item-class {
+    @extend .nav-item;
+    @extend .nav-button;
+    @extend .hide-med-up; 
+}
+.small-nav-menu-class{
+    @extend .nav-item;
+    @extend .hide-med-up;
+    float: right;
+    cursor: pointer;
+    &:hover{
+        @include black-back();
+    }
 }
 .nav-bar-class {
     @extend .bar;
@@ -75,6 +90,9 @@ a {
     .nav-bar-class {
         @include white-back();
     }
+}
+.hidden {
+    display: none;
 }
 @keyframes animatetop {
     0%{

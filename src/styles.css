@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "https://fonts.googleapis.com/css?family=Amatica+SC|Oswald:300";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 body {
     font-family: Oswald,sans-serif;
     margin: 0;
