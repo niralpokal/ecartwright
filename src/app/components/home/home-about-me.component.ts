@@ -4,12 +4,44 @@ import { Component } from '@angular/core';
     selector: 'home-about-me',
     styleUrls: ['home-about-me.component.scss'],
     template: `
-    <div class="container margin content ">
-        <h3 class="center font">About Me</h3>
-        <p style="white-space:pre-line">
-            {{intro}}
-        <p>
-        <img class="img img-center" src="../../../assets/profile.jpg" height="400" >
+    <div class="parallex container overlay">  
+        <div class="center white-space">     
+            <span class="black padding large-center-text">About Me</span>
+        </div>
+    </div>
+    <div class="flex-container-row">
+        <div class="flex-container-col width-50">
+            <div class="flex-item">
+                <p style="white-space:pre-line">
+                   {{intro}}
+                <p>
+            </div>
+        </div>
+        <div class="flex-container-col width-50">
+            <div class="flex-item">
+                <img class="img img-center" src="../../../assets/profile.jpg" height="400">
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="flex-item">
+            <div class="link-container"> 
+                <p>Email: </p>
+                <a href="mailto:emma.cartwright.43@gmail.com">emma.cartwright.43@gmail.com</a> 
+            </div>
+        </div>
+        <div class="flex-item">
+            <div class="link-container"> 
+                <p>Phone:</p>
+                <a href="tel://302.540.2575">(302) 540-2575</a>
+            </div>
+        </div> 
+        <div class="flex-item"> 
+            <div class="link-container"> 
+                <p>LinkedIn: </p>
+                <a href="https://linkedin.com/in/emmacartwright">linkedin.com/in/emmacartwright</a>
+            </div>
+        </div>
     </div>
     `  
 })

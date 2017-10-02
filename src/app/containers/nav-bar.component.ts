@@ -35,7 +35,6 @@ export class NavBarComponent implements OnInit {
 
     scroll = (e):void => { 
        let top: number = document.documentElement.scrollTop || document.body.scrollTop;
-       debugger;
        if (top > 200) this.navBarClass = scrollNavBarClass;
        else this.navBarClass = topNavBarClass; 
     }
