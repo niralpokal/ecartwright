@@ -6,16 +6,14 @@ import { Component } from '@angular/core';
     template: `
     <div class="parallex container overlay">  
         <div class="center white-space">     
-            <span class="black padding large-center-text">About Me</span>
+            <span class="white-text padding large-center-text">About Me</span>
         </div>
     </div>
     <div class="flex-container-row">
         <div class="flex-container-col">
-            <div class="flex-item">
-                <p style="white-space:pre-line;">
-                   {{intro}}
-                <p>
-            </div>
+            <p style="white-space:pre-line;">
+                {{intro}}
+            <p>
         </div>
         <div class="flex-container-col candid">
             <div class="flex-item">

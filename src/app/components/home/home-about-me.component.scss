@@ -9,9 +9,8 @@ p { font-size: 1rem; }
     max-width: 980px;
     margin: auto;
 }
-.center {
-    text-align: center;
-}
+
+.center { text-align: center; }
 
 .img {
     max-width: 100%;
@@ -43,7 +42,7 @@ p { font-size: 1rem; }
     transform: translate(-50%, -50%);
 }
 
-.black {
+.white-text {
     color: white;
     text-align: center;
 }
@@ -52,6 +51,7 @@ p { font-size: 1rem; }
     font-size: 3rem;
     letter-spacing: 1rem;
 }
+
 .flex-container-row {
     display: flex;
     flex-flow: row wrap;
@@ -59,6 +59,7 @@ p { font-size: 1rem; }
     margin: 0 0 1rem 0;
     flex:1;
 }
+
 .flex-container-col {
     display: flex;
     flex-flow: column;
