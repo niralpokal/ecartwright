@@ -10,20 +10,20 @@ import { Component } from '@angular/core';
         </div>
     </div>
     <div class="flex-container-row">
-        <div class="flex-container-col width-50">
+        <div class="flex-container-col">
             <div class="flex-item">
-                <p style="white-space:pre-line">
+                <p style="white-space:pre-line;">
                    {{intro}}
                 <p>
             </div>
         </div>
-        <div class="flex-container-col width-50">
+        <div class="flex-container-col candid">
             <div class="flex-item">
                 <img class="img img-center" src="../../../assets/profile.jpg" height="400">
             </div>
         </div>
     </div>
-    <div class="flex-container">
+    <div class="flex-container-col">
         <div class="flex-item">
             <div class="link-container"> 
                 <p>Email: </p>
