@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
     template: `
     <div class="container parallex overlay">
         <div class="center">
-            <span class="padding black text-large">Instagram</span>
+            <span class="padding white-text text-large">Instagram</span>
         </div>
     </div>
     <div class="flex-container">
-        <div class="flex-item" *ngFor="let i of images;">
+        <div class="flex-item" *ngFor="let image of images;">
             <img class="img" src="../../../assets/profile.jpg">
         </div>
     </div>
@@ -18,5 +18,5 @@ import { Component } from '@angular/core';
 })
 
 export class HomeInstagramComponent{
-    images = Array(4).fill('');
+    images = Array(8).fill('');
 }
