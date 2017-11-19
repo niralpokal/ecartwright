@@ -1,10 +1,10 @@
+.padding { padding: 1rem 1.5rem; }
+.overlay { opacity: .8; }
+.white-space { white-space: nowrap; }
+
 .container {
     position: relative;
-    margin: 0 0 64px 0;
-}
-
-.overlay {
-    opacity: .8;
+    margin: 4rem 0 2rem 0;
 }
 
 .parallex {
@@ -21,20 +21,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.white-space {
-    white-space: nowrap;
-}
 
-.black {
+.white-text {
     color: white;
     text-align: center;
 }
-.padding {
-    padding: 12px 24px;
-}
+
 .large-center-text {
-    font-size: 42px;
-    letter-spacing: 10px;
+    font-size: 3rem;
+    letter-spacing: 1rem;
 }
 .flex-container {
     display: flex;
@@ -43,14 +38,23 @@
     align-content: space-between;
     padding: 0;
     margin: 0;
+    flex: 1;
 }
+
 .flex-item {
-    height: 200px;
-    width: 200px;
-    margin-top: 10px;
+    width: 300px;
+    margin-top: 1rem;
 }
 
 .img {
     max-width: 100%;
     height: auto;
+}
+
+$break-small: 320px;
+
+.flex-item {
+    @media screen and (max-width: $break-small) {
+        width: 150px;
+    }
 }

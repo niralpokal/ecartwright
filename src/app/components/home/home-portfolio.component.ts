@@ -5,40 +5,17 @@ import { Component } from '@angular/core';
     styleUrls: ['home-portfolio.component.scss'],
     template: `
     <div class="parallex container overlay">
-       <div class="center white-space">     
-            <span class="black padding large-center-text">Portfolio</span>
+       <div class="center white-space">
+            <span class="white-text padding large-center-text">Portfolio</span>
         </div>
     </div>
-    <div class="flex-container margin-top">
-        <div class="flex-item">
-            <img class="img" src="../../../assets/profile.jpg">
-        </div>
-        <div class="flex-item">
-            <img class="img" src="../../../assets/profile.jpg">
-        </div>
-        <div class="flex-item">
-            <img class="img" src="../../../assets/profile.jpg">
-        </div>
-        <div class="flex-item">
-            <img class="img" src="../../../assets/profile.jpg">
-        </div>
-        </div>
-        <div class="flex-container">
-        <div class="flex-item">
-            <img class="img" src="../../../assets/profile.jpg">
-        </div>
-        <div class="flex-item">
-            <img class="img" src="../../../assets/profile.jpg">
-        </div>
-        <div class="flex-item">
-            <img class="img" src="../../../assets/profile.jpg">
-        </div>
-        <div class="flex-item">
+    <div class="flex-container">
+        <div class="flex-item" *ngFor="let image of images">
             <img class="img" src="../../../assets/profile.jpg">
         </div>
     </div>
     `
 })
 export class HomePortfolioComponent {
-
-} 
+    images = Array(8).fill('');
+}
