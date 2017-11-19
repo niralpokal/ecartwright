@@ -1,5 +1,5 @@
 h3 { font-size: 2rem; }
-p { font-size: 1rem; }
+p { font-size: 1.5rem; }
 .font { font-weight: 500; }
 .overlay { opacity: .8; }
 .white-space { white-space: nowrap; }
@@ -28,7 +28,7 @@ p { font-size: 1rem; }
 }
 
 .parallex {
-    min-height: 300px;
+    min-height: 350px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@ p { font-size: 1rem; }
 .flex-container-col {
     display: flex;
     flex-flow: column;
-    padding: 0 0 0 1rem;
+    padding: 0 1rem 0 1rem;
     margin: 0 0 1rem 0;
     flex:1; 
     justify-content: center;
