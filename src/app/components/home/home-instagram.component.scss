@@ -53,9 +53,16 @@
 }
 
 $break-small: 320px;
+$break-medium: 600px;
 
 .flex-item {
     @media screen and (max-width: $break-small) {
         width: 150px;
+    }
+}
+
+.hide-small {
+    @media screen and (max-width: $break-medium) {
+        display: none;
     }
 }
