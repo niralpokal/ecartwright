@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
         </div>
     </div>
     <div class="flex-container">
-        <div class="flex-item" *ngFor="let image of images">
-            <img class="img" src="../../../assets/profile.jpg">
+        <div class="flex-item" *ngFor="let image of images; index as i;">
+            <img [ngClass]="{ 'img': true, 'hide-small': (i > 5) }" src="../../../assets/profile.jpg">
         </div>
     </div>
     `
