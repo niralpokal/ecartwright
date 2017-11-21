@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     styleUrls:['home.component.scss'],
     template: `
     <div class="parallex container overlay">
-        <div class="center pre-white">
+        <div class="center white-space">
             <span class="padding"><img class="logo" src="../../assets/logo.png"></span>
         </div>
     </div>
