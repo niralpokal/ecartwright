@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     template: `
     <div class="parallex container overlay">
        <div class="center white-space">
-            <span class="white-text padding large-center-text">Portfolio</span>
+            <span class="white-text padding large-text">Portfolio</span>
         </div>
     </div>
     <div class="flex-container">

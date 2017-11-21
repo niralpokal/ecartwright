@@ -1,54 +1,7 @@
-.padding { padding: 1rem 1.5rem; }
-.overlay { opacity: .8; }
-.white-space { white-space: nowrap; }
-
-.container {
-    position: relative;
-    margin: 4rem 0 2rem 0;
-}
-
+.container { margin: 4rem 0 2rem 0; }
 .parallex {
     background-image: url("../../../assets/background2.jpg");
     min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.white-text {
-    color: white;
-    text-align: center;
-}
-
-.large-center-text {
-    font-size: 3rem;
-    letter-spacing: 1rem;
-}
-.flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: space-between;
-    padding: 0;
-    margin: 0;
-    flex: 1;
-}
-
-.flex-item {
-    width: 300px;
-    margin-top: 1rem;
-}
-
-.img {
-    max-width: 100%;
-    height: auto;
 }
 
 $break-small: 320px;
