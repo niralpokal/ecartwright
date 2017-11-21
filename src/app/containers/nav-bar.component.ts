@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-const topNavBarClass: string = 'nav-bar-class';
-const scrollNavBarClass: string = `${topNavBarClass} white-back nav-trans`;
+import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
+const topNavBarClass = 'nav-bar-class';
+const scrollNavBarClass = `${topNavBarClass} white-back nav-trans`;
 
 @Component({
     selector: 'nav-bar',
@@ -19,26 +20,30 @@ const scrollNavBarClass: string = `${topNavBarClass} white-back nav-trans`;
         </div>
     </div>
     `
-}) 
+})
 
-export class NavBarComponent implements OnInit {
-    navBarClass:string = topNavBarClass;
-    navBarItems:[string] = ['Home', 'Portfolio', 'Instagram', 'Other'];
+export class NavBarComponent implements OnInit, OnDestroy {
+    navBarClass: string = topNavBarClass;
+    navBarItems: [string] = ['Home', 'Portfolio', 'Instagram', 'Other'];
     hideNavItems = true;
+
     ngOnInit() {
-        document.addEventListener('scroll', this.scroll, true); 
+        document.addEventListener('scroll', this.scroll, true);
     }
 
     ngOnDestroy() {
         document.removeEventListener('scroll', this.scroll, true);
     }
 
-    scroll = (e):void => { 
-       let top: number = document.documentElement.scrollTop || document.body.scrollTop;
-       if (top > 200) this.navBarClass = scrollNavBarClass;
-       else this.navBarClass = topNavBarClass; 
+    scroll = (e): void => {
+       const top: number = document.documentElement.scrollTop || document.body.scrollTop;
+       if (top > 200) {
+           this.navBarClass = scrollNavBarClass;
+       } else {
+           this.navBarClass = topNavBarClass;
+        }
     }
-    toggleNavItems = ():void =>{
+    toggleNavItems = (): void => {
         this.hideNavItems = !this.hideNavItems;
     }
 }

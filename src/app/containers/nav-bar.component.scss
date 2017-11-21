@@ -7,12 +7,16 @@
     background-color: black;
     color: white;
 }
+
+.nav-bar-class { @extend .bar; }
+.white-back { @include white-back(); }
+
 a {
     line-height: 1.8;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 .top {
-    position: fixed;;
+    position: fixed;
     top: 0px;
     width: 100%;
     z-index: 1;
@@ -20,10 +24,7 @@ a {
 .bar {
     width: 100%;
     overflow: hidden;
-    color:#777;
-}
-.white-back {
-    @include white-back();
+    color: black;
 }
 .nav-trans {
     position: relative;
@@ -75,9 +76,7 @@ a {
         @include black-back();
     }
 }
-.nav-bar-class {
-    @extend .bar;
-}
+
 @media (min-width: 601px){
     .hide-med-up {
         display: none;
@@ -91,9 +90,7 @@ a {
         @include white-back();
     }
 }
-.hidden {
-    display: none;
-}
+
 @keyframes animatetop {
     0%{
         top: -300px;
