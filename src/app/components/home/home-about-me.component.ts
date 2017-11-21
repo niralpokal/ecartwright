@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
     selector: 'home-about-me',
     styleUrls: ['home-about-me.component.scss'],
     template: `
-    <div class="parallex container overlay">  
-        <div class="center white-space">     
-            <span class="white-text padding large-center-text">About Me</span>
+    <div class="parallex container overlay">
+        <div class="center white-space">
+            <span class="white-text padding large-text">About Me</span>
         </div>
     </div>
     <div class="flex-container-row">
@@ -23,25 +23,25 @@ import { Component } from '@angular/core';
     </div>
     <div class="flex-container-col">
         <div class="flex-item">
-            <div class="link-container"> 
+            <div class="link-container">
                 <p>Email: </p>
                 <a href="mailto:emma.cartwright.43@gmail.com">emma.cartwright.43@gmail.com</a> 
             </div>
         </div>
         <div class="flex-item">
-            <div class="link-container"> 
+            <div class="link-container">
                 <p>Phone:</p>
                 <a href="tel://302.540.2575">(302) 540-2575</a>
             </div>
-        </div> 
-        <div class="flex-item"> 
-            <div class="link-container"> 
+        </div>
+        <div class="flex-item">
+            <div class="link-container">
                 <p>LinkedIn: </p>
                 <a href="https://linkedin.com/in/emmacartwright">linkedin.com/in/emmacartwright</a>
             </div>
         </div>
     </div>
-    `  
+    `
 })
 
 export class HomeAboutMeComponent{
