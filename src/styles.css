@@ -5,3 +5,46 @@ body {
     font-family: Oswald,sans-serif;
     margin: 0;
 }
+.hidden { display: none; } 
+.container { position: relative; }
+.white-space { white-space: nowrap; }
+.padding { padding: 1rem 1.5rem; }
+.overlay { opacity: .8; }
+.white-text {
+    color: white;
+    text-align: center;
+}
+.large-text {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+}
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+}
+.parallex {
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+.flex-item {
+    width: 300px;
+    margin-top: 1rem;
+}
+.img {
+    max-width: 100%;
+    height: auto;
+}
