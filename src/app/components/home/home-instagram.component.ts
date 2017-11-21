@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     template: `
     <div class="container parallex overlay">
         <div class="center">
-            <span class="padding white-text text-large">Instagram</span>
+            <span class="padding white-text large-text">Instagram</span>
         </div>
     </div>
     <div class="flex-container">
@@ -17,6 +17,6 @@ import { Component } from '@angular/core';
     `
 })
 
-export class HomeInstagramComponent{
+export class HomeInstagramComponent {
     images = Array(8).fill('');
 }
