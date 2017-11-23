@@ -31,7 +31,7 @@ a {font-size: 1.5rem; }
 .flex-container-col {
     display: flex;
     flex-flow: column;
-    padding: 0 1rem 0 1rem;
+    padding: 0 4rem 0 4rem;
     margin: 0 0 1rem 0;
     flex:1; 
     justify-content: center;
@@ -39,9 +39,32 @@ a {font-size: 1.5rem; }
 }
 
 $break-large: 1320px;
+$break-medium: 900px;
+$break-small: 600px;
+$break-xsmall: 400px;
 
 .flex-container-row {
     @media screen and (max-width:$break-large) {
         flex-flow: column;
     }
 }
+.flex-container-col {
+    @media (min-width: $break-medium) and (max-width: $break-large) {
+        padding: 0 5rem 0 5rem;
+    }
+    @media (min-width: $break-large) {
+        padding: 0 3rem 0 3rem;
+    }
+    @media (min-width: $break-xsmall) and (max-width: $break-small) {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+    @media screen and (max-width: $break-small){
+        padding: 0 1rem 0 1rem;
+    }
+}
+.candid { 
+    padding: 0 0 0 0;
+    @media screen and (max-width: $break-small){
+        padding: 0 1rem 0 1rem;
+    }
+ }

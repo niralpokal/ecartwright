@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
         <div class="flex-container-col">
             <p style="white-space:pre-line;">
                 {{intro}}
-            <p>
+            </p>
         </div>
         <div class="flex-container-col candid">
             <div class="flex-item">
