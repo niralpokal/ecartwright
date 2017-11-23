@@ -24,7 +24,7 @@ const scrollNavBarClass = `${topNavBarClass} white-back nav-trans`;
 
 export class NavBarComponent implements OnInit, OnDestroy {
     navBarClass: string = topNavBarClass;
-    navBarItems: [string] = ['Home', 'Portfolio', 'Instagram', 'Other'];
+    navBarItems: [string] = ['Home', 'Portfolio', 'Instagram', 'Blog'];
     hideNavItems = true;
 
     ngOnInit() {
