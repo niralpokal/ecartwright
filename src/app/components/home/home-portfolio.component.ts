@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
     selector:'home-portfolio',
@@ -10,12 +10,21 @@ import { Component } from '@angular/core';
         </div>
     </div>
     <div class="flex-container">
-        <div class="flex-item" *ngFor="let image of images; index as i;">
-            <img [ngClass]="{ 'img': true, 'hide-small': (i > 5) }" src="../../../assets/profile.jpg">
+        <div class="flex-item" *ngFor="let image of portfolioImages; index as i;">
+            <img [ngClass]="{ 'img': true, 'hide-small': (i > 5) }" [src]="image.url">
         </div>
     </div>
     `
 })
-export class HomePortfolioComponent {
-    images = Array(8).fill('');
+export class HomePortfolioComponent implements OnChanges {
+    @Input()
+    portfolioImages: [{}];
+    constructor() {}
+
+    ngOnChanges(changes) {
+        if (changes.portfolioImages) {
+            this.portfolioImages =  changes.portfolioImages.currentValue;
+            console.log(this.portfolioImages)
+        }
+    }
 }

@@ -11,17 +11,23 @@ import { ImageService } from '../services/image.service';
             <span class="padding"><img class="logo" src="../../assets/logo.png"></span>
         </div>
     </div>
-    <home-portfolio></home-portfolio>
-    <home-instagram></home-instagram>
+    <home-portfolio [portfolioImages]="portfolioImages"></home-portfolio>
+    <home-instagram [instagramImages]="instagramImages"></home-instagram>
     <home-about-me></home-about-me>
     `
 })
 
 export class HomeComponent implements OnInit {
     constructor (private imageService: ImageService) { }
-
+    portfolioImages: [{}];
+    instagramImages: [{}];
     ngOnInit() {
        this.imageService.getHomeImages()
-        .subscribe(data => console.log(data));
+        .subscribe(data => {
+           const portfolio = data.resources.filter(item => (item.public_id.includes('natural')) ? true : false);
+           const instagram = data.resources.filter(item => (item.public_id.includes('studio')) ? true : false);
+           this.portfolioImages = portfolio;
+           this.instagramImages = instagram;
+        });
     }
 }
