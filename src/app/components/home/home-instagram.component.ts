@@ -20,7 +20,17 @@ import { Component, Input, OnChanges } from '@angular/core';
 export class HomeInstagramComponent implements OnChanges {
     @Input()
     instagramImages: [{}];
+
     ngOnChanges(changes) {
-        this.instagramImages = changes.instagramImages.currentvalue;
+        if (changes.instagramImages.currentValue) {
+            const images = changes.instagramImages.currentValue;
+            this.instagramImages = images.map(image => {
+                const transform = 'upload/w_300,h_300,c_fill';
+                const curUrl = image.url.split('upload');
+                curUrl[0] = curUrl[0] + transform;
+                image.url = curUrl.join('');
+                return image;
+            });
+        }
     }
 }

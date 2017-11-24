@@ -22,8 +22,15 @@ export class HomePortfolioComponent implements OnChanges {
     constructor() {}
 
     ngOnChanges(changes) {
-        if (changes.portfolioImages) {
-            this.portfolioImages =  changes.portfolioImages.currentValue;
+        if (changes.portfolioImages.currentValue) {
+            const images =  changes.portfolioImages.currentValue;
+            this.portfolioImages = images.map(image => {
+                const transform = 'upload/w_300,h_300,c_fill';
+                const curUrl = image.url.split('upload');
+                curUrl[0] = curUrl[0] + transform;
+                image.url = curUrl.join('');
+                return image;
+            });
         }
     }
 }
