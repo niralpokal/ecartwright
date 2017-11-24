@@ -32,6 +32,10 @@
 npm-debug.log
 testem.log
 /typings
+db.json
+
+#server
+/server/cloudinary_keys.js
 
 # e2e
 /e2e/*.js
