@@ -24,12 +24,16 @@ export class HomePortfolioComponent implements OnChanges {
     ngOnChanges(changes) {
         if (changes.portfolioImages.currentValue) {
             const images =  changes.portfolioImages.currentValue;
+            let count = 0;
             this.portfolioImages = images.map(image => {
                 const transform = 'upload/w_300,h_300,c_fill';
                 const curUrl = image.url.split('upload');
                 curUrl[0] = curUrl[0] + transform;
                 image.url = curUrl.join('');
                 return image;
+            }).filter(item => {
+                count ++;
+                return (count > 12) ? false : true;
             });
         }
     }
