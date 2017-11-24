@@ -1,30 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Response } from '@angular/http/src/static_response';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
 
-const IMAGE_API = '/api/images';
+
+
+const IMAGE_API = '/images';
 @Injectable()
 
 export class ImageService {
-    constructor (private http: Http) {}
+    constructor (private http: HttpClient) {}
 
     getHomeImages() {
         return this.http
-            .get(`${IMAGE_API}/home`)
-            .map((response: Response) => response.json());
+            .get(`${IMAGE_API}`);
     }
 
     getInstagramImages() {
         return this.http
-            .get(`${IMAGE_API}/instagram`)
-            .map((response: Response) => response.json());
+            .get(`${IMAGE_API}/instagram`);
     }
 
     getPortfolioImages() {
         return this.http
-            .get(`${IMAGE_API}/portfolio`)
-            .map((response: Response) => response.json());
+            .get(`${IMAGE_API}/portfolio`);
     }
 }

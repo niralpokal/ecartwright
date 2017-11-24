@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
+
+import { ImageService } from '../services/image.service';
 @Component({
     selector: 'home',
     styleUrls: ['home.component.scss'],
@@ -15,6 +17,11 @@ import { Component } from '@angular/core';
     `
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+    constructor (private imageService: ImageService) { }
 
+    ngOnInit() {
+       this.imageService.getHomeImages()
+        .subscribe(data => console.log(data));
+    }
 }
