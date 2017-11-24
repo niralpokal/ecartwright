@@ -24,7 +24,6 @@ export class HomePortfolioComponent implements OnChanges {
     ngOnChanges(changes) {
         if (changes.portfolioImages) {
             this.portfolioImages =  changes.portfolioImages.currentValue;
-            console.log(this.portfolioImages)
         }
     }
 }
